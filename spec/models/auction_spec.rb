@@ -34,5 +34,3 @@ RSpec.describe Auction, type: :model do
     end
   end
 end
-
-puts "*******************************************************************"

@@ -8,4 +8,6 @@ html
     = csrf_meta_tags
   body
     .container-fluid
+      -if flash[:alert]
+        =flash[:alert]
       = yield
