@@ -27,6 +27,11 @@ RSpec.describe Auction, type: :model do
       auction.valid?
       expect(auction.errors.messages).to have_key(:end_time)
     end
+    it 'reserve must be a number' do
+      auction = Auction.new(reserve: "string")
+      auction.valid?
+      expect(auction.errors.messages).to have_key(:reserve)
+    end
   end
 end
 

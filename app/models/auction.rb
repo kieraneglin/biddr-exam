@@ -2,7 +2,7 @@ class Auction < ActiveRecord::Base
   validates :title, presence: true
   validates :body, presence: true
   validates :end_time, presence: true
-  validates :reserve, presence: true
+  validates :reserve, presence: true, numericality: true
 
   validate :end_time_is_in_future
 
